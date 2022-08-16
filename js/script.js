@@ -29,24 +29,65 @@
 // } else {
 //     box1.classList.add('blue');
 // }
-// Добавление событий Урок 29
 
-const button = document.querySelector('button'),
-      h1 = document.querySelector('h1'),
-      input = document.querySelector('input');
+// Урок 29 Добавление событий 
 
-button.addEventListener('click', () => {
-    console.log('clicked!');
-    h1.textContent = input.value;
-});
+// const button = document.querySelector('button'),
+//       h1 = document.querySelector('h1'),
+//       input = document.querySelector('input');
 
-h1.addEventListener('mouseenter', function () {
-    this.style.color = 'red';
-    this.style.backgroundColor ='black';
-})
-h1.addEventListener('mouseleave', function () {
-    this.style.color = 'black';
-    this.style.backgroundColor ='transparent';
+// button.addEventListener('click', () => {
+//     console.log('clicked!');
+//     h1.textContent = input.value;
+// });
 
+// h1.addEventListener('mouseenter', function () {
+//     this.style.color = 'red';
+//     this.style.backgroundColor ='black';
+// })
+// h1.addEventListener('mouseleave', function () {
+//     this.style.color = 'black';
+//     this.style.backgroundColor ='transparent';
     
+// })
+// Урок 30 Всплытие и погружение
+// const divs = document.querySelectorAll('div');
+// for(let i = 0; i < divs.length; i++) {
+//     divs[i].addEventListener('click', function(event) {
+//         event.stopPropagation();
+//         console.log(this.getAttribute('id'));
+//     })
+// }
+// Урок 30 Всплытие и погружение
+// const divs = document.querySelectorAll('div'),
+//       link = document.querySelector('a');
+// for(let i = 0; i < divs.length; i++) {
+//     divs[i].addEventListener('click', function(event) {
+//         event.stopPropagation();
+//         console.log(this.getAttribute('id'));
+//     })
+// }
+// link.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     const div = divs[0];
+//     div.style.display = div.style.display === 'none'
+//     ? 'flex'
+//     : 'none'
+
+// Урок 31 Делегирование событий
+// const p = document.querySelectorAll('p');
+
+// for (let i = 0; i < p.length; i++) {
+//     p[i].addEventListener('click', (event) => {
+//         event.target.style.color = 'blue'
+//     })
+// }
+document.querySelector('.wrapper').addEventListener('click', function(event) {
+   const tagName = event.target.tagName.toLowerCase();
+   if (tagName === 'p') {
+    event.target.style.color = 'blue';
+   }
+   if(event.target.classList.contains('color')) {
+    event.target.style.color = 'yellow'
+   }
 })
