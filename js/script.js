@@ -82,12 +82,27 @@
 //         event.target.style.color = 'blue'
 //     })
 // }
-document.querySelector('.wrapper').addEventListener('click', function(event) {
-   const tagName = event.target.tagName.toLowerCase();
-   if (tagName === 'p') {
-    event.target.style.color = 'blue';
+// document.querySelector('.wrapper').addEventListener('click', function(event) {
+//    const tagName = event.target.tagName.toLowerCase();
+//    if (tagName === 'p') {
+//     event.target.style.color = 'blue';
+//    }
+//    if(event.target.classList.contains('color')) {
+//     event.target.style.color = 'yellow';
+//    }
+// })
+
+// Урок 34 Взаимодействие с пользователем
+document.querySelector('#alert').addEventListener('click', () => {
+   alert('Вы успешно кликнули');
+})
+document.querySelector("#confirm").addEventListener('click', () => {
+   let decision = confirm('Вы уверены??')
+   console.log(decision);
+   if (decision) {
+      alert('Вы успешно кликнули');
    }
-   if(event.target.classList.contains('color')) {
-    event.target.style.color = 'yellow'
-   }
+})
+document.querySelector('#prompt').addEventListener('click', () => {
+   prompt('Сколько вам лет?', '')
 })
