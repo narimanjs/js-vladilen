@@ -159,4 +159,29 @@
 // console.log(JSON.stringify(person));
 
 // Date
-const date = new Date();
+// const date = new Date();
+
+// 39 LocalStorage
+// document.querySelector('button').addEventListener('click', function(){
+
+//    const value = document.querySelector('input').value
+//    const obj = {
+//       text: value
+//    }
+   
+//    localStorage.setItem('headerText', JSON.stringify(obj))
+// })
+
+// document.addEventListener('DOMContentLoaded', function(){
+//    var obj 
+//    try {
+//       obj = JSON.parse(localStorage.getItem('headerText'))
+//    } catch (e) {
+//       obj = {}
+//    }
+  
+
+//    if (obj.text && obj.text.trim ()) {
+//       document.querySelector('h1').textContent = obj.text
+//    }
+// })
