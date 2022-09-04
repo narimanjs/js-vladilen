@@ -108,7 +108,7 @@ body {
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
   background: #fad64e;
   color: #3f3f3f;
   border: none;
