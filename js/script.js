@@ -82,12 +82,106 @@
 //         event.target.style.color = 'blue'
 //     })
 // }
-document.querySelector('.wrapper').addEventListener('click', function(event) {
-   const tagName = event.target.tagName.toLowerCase();
-   if (tagName === 'p') {
-    event.target.style.color = 'blue';
-   }
-   if(event.target.classList.contains('color')) {
-    event.target.style.color = 'yellow'
-   }
-})
+// document.querySelector('.wrapper').addEventListener('click', function(event) {
+//    const tagName = event.target.tagName.toLowerCase();
+//    if (tagName === 'p') {
+//     event.target.style.color = 'blue';
+//    }
+//    if(event.target.classList.contains('color')) {
+//     event.target.style.color = 'yellow';
+//    }
+// })
+
+// Урок 34 Взаимодействие с пользователем
+// document.querySelector('#alert').addEventListener('click', () => {
+//    alert('Вы успешно кликнули');
+// })
+// document.querySelector("#confirm").addEventListener('click', () => {
+//    let decision = confirm('Вы уверены??')
+//    console.log(decision);
+//    if (decision) {
+//       alert('Вы успешно кликнули');
+//    }
+// })
+// document.querySelector('#prompt').addEventListener('click', () => {
+//    prompt('Сколько вам лет?', '')
+// })
+
+// Урок 35 Методы массивов
+
+// const str = '1,2,3,4,5,6,7,8,9'
+// const array = str.split(','); // преобразовывает строку в массив
+// // console.log(array);
+// // console.log(array.join(';')); //преобразовывает  массив в строку
+// // console.log(array.reverse()); //меняет порядок  массива
+// // console.log(array.splice(0, 3, '11')); //первый параметр индекс, количество элементов которые хотим удалить
+// const newArr = array.concat(['1',2])
+// // console.log(newArr); //создает копию массива, возвращает новый массив
+
+// const objArray = [
+//    {name: 'Nar', age: 27},
+//    {name: 'Elena', age: 18},
+//    {name: 'Dana', age: 24}
+// ]
+// // console.log(objArray);
+// const foundPerson = objArray.find(function(person) {
+//    return person.age === 24;
+// })
+// // console.log(foundPerson);
+// const oddArray = [1,2,3,4,5,5,8,9,10].filter(function(i) {
+//    return i % 2 === 0;
+// })
+// // console.log(oddArray);
+// console.log(array);
+// const numArray = array.map(function(i) {
+//    return i * 2
+// })
+// console.log(numArray);
+
+// //36 Math
+// const num = 2.9;
+// console.log(Math.random());
+// console.log(Math.floor(num));
+// console.log(Math.ceil(num));
+
+//37 JSON  Приводить объекты к строкам
+
+// let person = {
+//    name: 'Nar',
+//    age: 26,
+//    car: {
+//       model: 'Tesla'
+//    },
+//    job: 'FrontEnd',
+//    friends: ['Elena', 'Dana']
+// } 
+// console.log(person);
+// console.log(JSON.stringify(person));
+
+// Date
+// const date = new Date();
+
+// 39 LocalStorage
+// document.querySelector('button').addEventListener('click', function(){
+
+//    const value = document.querySelector('input').value
+//    const obj = {
+//       text: value
+//    }
+   
+//    localStorage.setItem('headerText', JSON.stringify(obj))
+// })
+
+// document.addEventListener('DOMContentLoaded', function(){
+//    var obj 
+//    try {
+//       obj = JSON.parse(localStorage.getItem('headerText'))
+//    } catch (e) {
+//       obj = {}
+//    }
+  
+
+//    if (obj.text && obj.text.trim ()) {
+//       document.querySelector('h1').textContent = obj.text
+//    }
+// })
