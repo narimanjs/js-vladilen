@@ -8,6 +8,7 @@ let $gameTime = document.querySelector('#game-time')
 
 let score = 0;
 let isGameStarted = false;
+let colors = ['red', 'blue', 'green', 'yellow', 'black']
 
 $start.addEventListener('click', startGame)
 $game.addEventListener('click', handleBoxClick)
@@ -80,11 +81,12 @@ function renderBox() {
   let gameSize = $game.getBoundingClientRect()
   let maxTop = gameSize.height - boxSize
   let maxLeft = gameSize.width - boxSize
+  let randomColorsIndex = getRandom(0, colors.length)
 
   box.style.height = box.style.width = boxSize + 'px'
   box.style.borderRadius = '50%'
   box.style.position = 'absolute'
-  box.style.backgroundColor = '#000'
+  box.style.backgroundColor = colors[randomColorsIndex]
   box.style.top = getRandom(0, maxTop) + 'px'
   box.style.left = getRandom(0, maxLeft) + 'px'
   box.style.cursor = 'pointer'
